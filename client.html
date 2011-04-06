@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <script type="text/javascript" src="faye.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var client = new Faye.Client('http://localhost:8000/');
+        client.subscribe('/foo', function(message) {
+          alert(message);
+        });
+    </script>
+  </body>
+</html>
